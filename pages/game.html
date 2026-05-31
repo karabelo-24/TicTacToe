@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Tic Tac Toe</title>
+
+<link rel="stylesheet"
+href="../css/game.css">
+
+</head>
+<body>
+
+<div class="game-wrap">
+
+    <div id="status">
+        Player X's Turn
+    </div>
+
+    <div class="board">
+
+        <button class="cell"
+        data-index="0"></button>
+
+        <button class="cell"
+        data-index="1"></button>
+
+        <button class="cell"
+        data-index="2"></button>
+
+        <button class="cell"
+        data-index="3"></button>
+
+        <button class="cell"
+        data-index="4"></button>
+
+        <button class="cell"
+        data-index="5"></button>
+
+        <button class="cell"
+        data-index="6"></button>
+
+        <button class="cell"
+        data-index="7"></button>
+
+        <button class="cell"
+        data-index="8"></button>
+
+    </div>
+
+    <div id="overlay" class="overlay hidden">
+        <div id="resultText"></div>
+    </div>
+
+    <div class="actions">
+
+        <button id="restartBtn">
+            Restart Game
+        </button>
+
+        <button id="newGameBtn">
+            New Game
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/game.js"></script>
+
+</body>
+</html>
