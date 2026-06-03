@@ -322,7 +322,7 @@ function aiMove(){
     ){
 
         if(
-            Math.random() < 0.4
+            Math.random() < 0.3
         ){
 
             randomMove();

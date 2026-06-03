@@ -27,11 +27,53 @@
     <button id="startBtn">
         Start Game
     </button>
-      <div class="vs">
-            <span class="x">X</span>
-            <span class="text">vs</span>
-            <span class="o">O</span>
+
+    <!-- Modal -->
+    <div id="gameModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <div id="playerSection">
+
+                <h2>Select Players</h2>
+
+                <button class="playerBtn" data-players="1">
+                    1 Player
+                </button>
+
+                <button class="playerBtn" data-players="2">
+                    2 Players
+                </button>
+
+            </div>
+
+            <div id="difficultySection" class="hidden">
+
+                <h2>Select Difficulty</h2>
+
+                <button class="difficultyBtn" data-difficulty="easy">
+                    Easy
+                </button>
+
+                <button class="difficultyBtn" data-difficulty="medium">
+                    Medium
+                </button>
+
+                <button class="difficultyBtn" data-difficulty="impossible">
+                    Impossible
+                </button>
+
+            </div>
+
         </div>
+
+    </div>
+
+    <div class="vs">
+        <span class="x">X</span>
+        <span class="text">vs</span>
+        <span class="o">O</span>
+    </div>
 
 </main>
 

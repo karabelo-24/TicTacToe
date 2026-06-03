@@ -8,7 +8,7 @@
 
     --gradient:
     linear-gradient(
-        135deg,
+        135deg,a
         var(--x),
         var(--o)
     );
@@ -50,7 +50,8 @@ h1{
 
 h1 span{
     background:var(--gradient);
-    -webkit-background-clip:text;
+    -webkit-background-clip: text;
+    background-clip: text;
     color:transparent;
 }
 
@@ -97,4 +98,34 @@ button{
 .text{
     font-size:30px;
     color:var(--muted);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 300px;
+}
+
+.modal-content button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    cursor: pointer;
 }

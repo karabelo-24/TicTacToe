@@ -1,39 +1,41 @@
-document
-.getElementById("startBtn")
-.addEventListener("click", () => {
+const startBtn = document.getElementById("startBtn");
+const gameModal = document.getElementById("gameModal");
+const playerSection = document.getElementById("playerSection");
+const difficultySection = document.getElementById("difficultySection");
 
-    const players = prompt(
-        "Enter number of players (1 or 2)"
-    );
+startBtn.addEventListener("click", () => {
+    gameModal.classList.remove("hidden");
+});
 
-    if (players !== "1" && players !== "2") {
-        alert("Error: Please enter either 1 or 2.");
-        return;
-    }
-    if (players === "1") {
+document.querySelectorAll(".playerBtn").forEach(button => {
 
-        const difficulty =prompt(
-            "Choose difficulty:\nEasy\nMedium\nImpossible"
-        )?.toLowerCase();
+    button.addEventListener("click", () => {
 
-        if(
-            difficulty !== "easy" &&
-            difficulty !== "medium" &&
-            difficulty !== "impossible"
-        ){
-            alert("Invalid difficulty. Choose Easy, Medium, or Impossible.");
-            return;
-}
+        const players = button.dataset.players;
 
-localStorage.setItem(
-    "difficulty",
-    difficulty
-);
-}
-    
+        localStorage.setItem("players", players);
 
-    localStorage.setItem("players", players);
+        if (players === "1") {
 
+            playerSection.classList.add("hidden");
+            difficultySection.classList.remove("hidden");
 
-    window.location.href = "pages/game.html";
+        } else {
+
+            window.location.href = "pages/game.html";
+
+        }
+    });
+});
+
+document.querySelectorAll(".difficultyBtn").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const difficulty = button.dataset.difficulty;
+
+        localStorage.setItem("difficulty", difficulty);
+
+        window.location.href = "pages/game.html";
+    });
 });
